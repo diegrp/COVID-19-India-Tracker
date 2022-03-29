@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { CardItem } from "./components/CardItem";
+import { TableItem } from "./components/TableItem";
+import Applogo from "./images/logo/logo.png";
+import { formateDate, myDate } from "./dateFilter";
 import axios from "axios";
 import './App.css';
 
@@ -40,8 +44,25 @@ const App = () => {
   };
 
   return(
-    <main>
-
+    <main className="app-container">
+      <div className="wrapper-app-logo">
+        <img src={Applogo} style={{height:"100px"}} alt="COVID19-Tracker"/>
+          <div className="title">
+            <h1>COVID-19 - INDIA TRACKER</h1>
+              <p>Rastreamente em tempo real, a partir de <strong>{formateDate(myDate())}</strong></p>
+          </div>
+      </div>
+        {/* Visão geral da quatidade de casos */}
+        <CardItem totalIndiaCase={totalIndiaCase}/>
+        {/* Tabela com os dados de infecção de cada estado */}
+        <TableItem 
+          totalStateWiseCount={totalStateWiseCount}
+          totalStateArrayLength={totalStateArrayLength}
+          loading={loading}
+          loadData={loadData}
+          fileteredData={filteredData}
+          stateSearch={stateSearch}
+        />
     </main>
   )
 }
