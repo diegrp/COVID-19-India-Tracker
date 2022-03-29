@@ -1,0 +1,298 @@
+/* Card Item */
+
+/* Contador  */
+
+.count{
+  font-size: 20px;
+}
+
+/* Card Confirmed */
+
+.wrapper-confirmed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-confirmed{
+  text-transform: uppercase;
+  height: 240px;
+  border-radius: 10px !important;
+  background-color: #dfdfdf !important;
+}
+
+.card-confirmed h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-confirmed img{
+  width: 55px;
+  height: 55px;
+}
+
+.text-warning{
+  font-size: 26px;
+  color: #ff4000;
+}
+
+/* Card Active */
+
+.wrapper-active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-active{
+  text-transform: uppercase;
+  height: 240px;
+  border-radius: 10px !important;
+  background-color: #dfdfdf !important;
+}
+
+.card-active h2{
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-active img{
+  width: 55px;
+  height: 65px;
+}
+
+.text-info{
+  font-size: 26px;
+  color: #0099cc;
+}
+
+/* Card Recovered */
+
+.wrapper-recovered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-recovered{
+  text-transform: uppercase;
+  height: 240px;
+  border-radius: 10px !important;
+  background-color: #dfdfdf !important;
+}
+
+.card-recovered h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-recovered img{
+  width: 60px;
+  height: 50px;
+}
+
+.text-sucess{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #52b85f;
+}
+
+/* Card Death */
+
+.wrapper-death{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card-death{
+  text-transform: uppercase;
+  height: 240px;
+  border-radius: 10px !important;
+  background-color: #dfdfdf !important;
+}
+
+.card-death h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-death img{
+  width: 45px;
+  height: 55px;
+}
+
+.text-dark{
+  font-size: 26px;
+  color: #2c2c2c;
+}
+
+@media screen and (max-width: 800px){
+
+  /* Confirmed */
+
+  .card-confirmed{
+    height: 205px !important;
+  }
+  .card-confirmed h2{
+    font-size: 18px;
+  }
+  .card-confirmed img{
+    width: 50px;
+    height: 45px;
+  }
+  .text-info{
+    font-size: 20px;
+  }
+
+  /* Active */
+
+  .card-active{
+    height: 205px !important;
+  }
+  .card-active h2{
+    font-size: 18px;
+  }
+  .card-active img{
+    width: 45px;
+    height: 55px;
+  }
+  .text-warning{
+    font-size: 20px;
+  }
+
+  /* Recovered */
+
+  .card-recovered{
+    height: 205px !important;
+  }
+  .card-recovered h2{
+    font-size: 18px;
+  }
+  .card-recovered img{
+    width: 45px;
+    height: 38px;
+  }
+  .text-sucess{
+    font-size: 20px;
+  }
+  
+  /* Death */
+
+  .card-death{
+    height: 205px !important;
+  }
+  .card-death h2{
+    font-size: 18px;
+  }
+  .card-death img{
+    width: 35px;
+    height: 45px;
+  }
+  .text-dark{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px){
+
+  /* Confirmed */
+
+  .card-confirmed{
+    height: 145px !important;
+  }
+  .card-confirmed h2{
+    display: none;
+    font-size: 18px;
+  }
+  .card-confirmed img{
+    width: 40px;
+    height: 40px;
+  }
+  .text-info{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Active */
+
+  .card-active{
+    height: 145px !important;
+  }
+  .card-active h2{
+    display: none;
+    font-size: 18px;
+  }
+  .card-active img{
+    width: 40px;
+    height: 45px;
+  }
+  .text-warning{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  /* Recovered */
+
+  .card-recovered{
+    height: 145px !important;
+  }
+  .card-recovered h2{
+    display: none;
+    font-size: 18px;
+  }
+  .card-recovered img{
+    width: 38px;
+    height: 35px;
+  }
+  .text-sucess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  /* Death */
+  
+  .card-death{
+    height: 145px !important;
+  }
+  .card-death h2{
+    display: none;
+    font-size: 18px;
+  }
+  .card-death img{
+    width: 30px;
+    height: 40px;
+  }
+  .text-dark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+}
