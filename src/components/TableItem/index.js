@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { Table, Space, Input, Pagination, Button, Tooltip, Row, Alert } from "antd";
+import { SearchOutlined, ClearOutlined, ReloadOutlined, WarningOutlined } from "@ant-design/icons";
 import './TableItem.css';
 
 // Tabela de casos de infecção
@@ -134,8 +137,103 @@ export const TableItem = ({
   }
 
   return(
-    <div>
-      ...
-    </div>
+    <section>
+      <Row justify="center" className="search-state">
+        <Space>
+          <Input
+            placeholder="Pesquise seu estado"
+            onChange={handleSearch}
+            type="text"
+            onPressEnter={(e) => {
+              if(e.key === 'Enter' && searchText !== ''){
+                stateSearch(searchText);
+                setEmpty(false);
+              }else{
+                setEmpty(true);
+              }
+            }}
+            size="large"
+            prefix={totalStateWiseCount.length === 0 && loading === false ? <WarningOutlined />:''}
+            status={totalStateWiseCount.length === 0 && loading === false && searchText !== '' ? 'error':''}
+            allowClear
+            value={searchText}
+          />
+        <Tooltip title="Procurar">
+          <Button 
+            style={{ backgroundColor: '#52b85f', borderColor: '#52b85f' }} 
+            type="primary" 
+            shape="circle" 
+            icon={<SearchOutlined />} 
+            onClick={() => {
+            if(searchText !== ''){
+              stateSearch(searchText);
+              setEmpty(false);
+            }else{
+              setEmpty(true);
+            }}}
+          />
+          </Tooltip>
+          <Tooltip title="Limpar">
+            <Button 
+              type="primary" 
+              shape="circle" 
+              icon={<ClearOutlined />} 
+              onClick={clearAll}
+            />
+          </Tooltip>
+          <Tooltip title="Atualizar">
+            <Button 
+              style={{ backgroundColor: '#ff4000', borderColor: '#ff4000' }} 
+              type="primary" 
+              shape="circle" 
+              icon={<ReloadOutlined />} 
+              loading={loading} 
+              onClick={refresh}
+            />
+          </Tooltip>
+        </Space>
+      </Row>
+      <Row justify="center">
+        <Space style={{ marginBottom:"40px" }}>
+          {empty && (
+            <Alert
+              message="Campo Vazio"
+              description="Preencha o campo para encontrar informações de infeccção em seu estado."
+              type="warning"
+              showIcon
+            />
+          )}
+        </Space>
+      </Row>
+      <Row justify="center">
+        <Table
+          columns={columns}
+          dataSource={
+            filteredData && filteredData.length ? filteredData : currentStateCovidCount.length !== 0
+            ? currentStateCovidCount
+            : totalStateWiseCount
+          }
+          rowKey="statecode"
+          pagination={false}
+          loading={loading}
+          bordered
+          onChange={handleChange}
+        />
+      </Row>
+      <Row justify="center">
+        <Space style={{ margin: "40px 0" }}>
+          <Pagination
+            onChange={(value) => setPage(value)}
+            pageSize={postPerPage}
+            total={totalStateArrayLength}
+            current={page}
+            showSizeChanger
+            showQuickJumper
+            onShowSizeChange={onShowSizeChange}
+            itemRender={itemRender}
+          />
+        </Space>
+      </Row>
+    </section>
   )
 }
