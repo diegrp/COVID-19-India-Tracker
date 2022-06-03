@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+## ⚙️ Project Name <a name = "projectname" ></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="left">COVID19 India Tracker</p>
 
-## Available Scripts
+## ✍️ Project Description
 
-In the project directory, you can run:
+<p align="left">Research and analysis of infection cases in India.</p>
 
-### `npm start`
+## 🏁 Table of Contents <a name = "table-of-contents" ></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About](#projectname)
+- [Table of Contents](#table-of-contents)
+- [Application View](#application-view)
+- [Requirements](#requirements)
+- [Technologies](#technologies)
+- [Author](#author)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🪔 Project Status 
 
-### `npm test`
+<p align="left"> 
+  🚀 COVID19 India Tracker is finish! 🔥
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖥️ Application View <a name = "application-view" ></a>
 
-### `npm run build`
+<br/>
+<h1 align="center">
+  <img alt="search for infection cases in india" src="./public/images/assets/1.png" />
+  <p>Search for infection cases in india</p>
+  <img alt="all cases of infection" src="./public/images/assets/2.png" />
+  <p>All cases of infection</p>
+</h1>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⛏️ Requirements <a name = "requirements" ></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• Before starting, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Also it's nice to have an editor to work with code like [VSCode](https://code.visualstudio.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎲 Turning the Back End (Server)
 
-### `npm run eject`
+```bash
+# Clone this repository
+$ git clone <https://github.com/diegrp/COVID-19-India-Tracker.git>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Access the project folder in terminal/cmd
+$ cd covid19-india-tracker
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install the dependencies
+$ yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run the application in development mode
+$ yarn start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# The server will start on port:3333 - access <http://localhost:3333>
+```
 
-## Learn More
+## 🛠️ Technologies <a name = "technologies" ></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+• The following tools were used in building the project: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<b>code install: </b>npm i antd axios react-countup
 
-### Code Splitting
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://pt-br.reactjs.org/)
+- [Ant Design](https://www.npmjs.com/package/antd)
+- [axios](https://www.npmjs.com/package/axios)
+- [react-countup](https://www.npmjs.com/package/react-countup)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 👨‍💼 Author <a name = "author" ></a>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Made with ❤️ by Diego Rocha !
